@@ -1,0 +1,939 @@
+2019-08-13 18:07:00 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\db\BaseActiveRecord::findAll(), 0 passed in C:\APP\GitHub\template\backend\controllers\PermissionController.php on line 96 and exactly 1 expected in C:\APP\GitHub\template\vendor\yiisoft\yii2\db\BaseActiveRecord.php:119
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\PermissionController.php(96): yii\db\BaseActiveRecord::findAll()
+#1 [internal function]: backend\controllers\PermissionController->actionAdminEdit()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('admin-edit', Array)
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('permission/admi...', Array)
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-08-13 18:06:59 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2228'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '64315'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565690819.0242
+    'REQUEST_TIME' => 1565690819
+]
+2019-08-13 18:14:37 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: roleid in C:\APP\GitHub\template\backend\views\permission\admin_edit.php:33
+Stack trace:
+#0 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\APP\GitHub\template\backend\controllers\PermissionController.php(120): backend\controllers\PermissionController->render()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdminEdit()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#8 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#11 {main}
+2019-08-13 18:14:36 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2260'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '65088'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565691276.6598
+    'REQUEST_TIME' => 1565691276
+]
+2019-08-13 18:15:05 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: roleid in C:\APP\GitHub\template\backend\views\permission\admin_edit.php:33
+Stack trace:
+#0 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\APP\GitHub\template\backend\controllers\PermissionController.php(120): backend\controllers\PermissionController->render()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdminEdit()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#8 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#11 {main}
+2019-08-13 18:15:04 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2260'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '65132'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565691304.0506
+    'REQUEST_TIME' => 1565691304
+]
+2019-08-13 18:28:33 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][ArgumentCountError] ArgumentCountError: Too few arguments to function common\components\MosCache::getByKey(), 1 passed in C:\APP\GitHub\template\backend\controllers\PermissionController.php on line 96 and at least 2 expected in C:\APP\GitHub\template\common\components\MosCache.php:90
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\PermissionController.php(96): common\components\MosCache->getByKey('admin_datas')
+#1 [internal function]: backend\controllers\PermissionController->actionAdminEdit()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('admin-edit', Array)
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('permission/admi...', Array)
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-08-13 18:28:31 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2152'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '49156'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692111.7323
+    'REQUEST_TIME' => 1565692111
+]
+2019-08-13 18:35:30 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][Error] Error: Call to undefined method Yii::app() in C:\APP\GitHub\template\common\components\MosCache.php:92
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\MosController.php(50): common\components\MosCache->getByKey('setting_datas', 'backend_enable_...')
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(155): backend\controllers\MosController->beforeAction(Object(yii\base\InlineAction))
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('admin-edit', Array)
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('permission/admi...', Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-08-13 18:35:29 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2252'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '50032'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692529.0051
+    'REQUEST_TIME' => 1565692529
+]
+2019-08-13 18:35:43 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: backend\components\MCache::flush() in C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\APP\GitHub\template\common\components\MosCache.php(92): yii\base\Component->__call('flush', Array)
+#1 C:\APP\GitHub\template\backend\controllers\MosController.php(50): common\components\MosCache->getByKey('setting_datas', 'backend_enable_...')
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(155): backend\controllers\MosController->beforeAction(Object(yii\base\InlineAction))
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('admin-edit', Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('permission/admi...', Array)
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-08-13 18:35:42 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2256'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '50056'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692542.4768
+    'REQUEST_TIME' => 1565692542
+]
+2019-08-13 18:36:00 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\components\MCache::cache in C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\APP\GitHub\template\common\components\MosCache.php(92): yii\base\Component->__get('cache')
+#1 C:\APP\GitHub\template\backend\controllers\MosController.php(50): common\components\MosCache->getByKey('setting_datas', 'backend_enable_...')
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(155): backend\controllers\MosController->beforeAction(Object(yii\base\InlineAction))
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('admin-edit', Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('permission/admi...', Array)
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-08-13 18:35:59 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2252'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '50100'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692559.118
+    'REQUEST_TIME' => 1565692559
+]
+2019-08-13 18:37:33 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][Error] Error: Call to undefined method Yii::app() in C:\APP\GitHub\template\common\components\MosCache.php:92
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\MosController.php(50): common\components\MosCache->getByKey('setting_datas', 'backend_enable_...')
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(155): backend\controllers\MosController->beforeAction(Object(yii\base\InlineAction))
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update-cache', Array)
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tool/update-cac...', Array)
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\APP\GitHub\template\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-08-13 18:37:32 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2252'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/tool/update-cache'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/tool/update-cache'
+    'REMOTE_PORT' => '50345'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692652.6417
+    'REQUEST_TIME' => 1565692652
+]
+2019-08-13 18:39:07 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: roleid in C:\APP\GitHub\template\backend\views\permission\admin_edit.php:33
+Stack trace:
+#0 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\APP\GitHub\template\backend\controllers\PermissionController.php(120): backend\controllers\PermissionController->render()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdminEdit()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#8 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#11 {main}
+2019-08-13 18:39:06 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'userid' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2256'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin-edit?userid=2'
+    'QUERY_STRING' => 'userid=2'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'userid=2'
+    'REDIRECT_URL' => '/permission/admin-edit'
+    'REMOTE_PORT' => '50518'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565692746.0855
+    'REQUEST_TIME' => 1565692746
+]
+2019-08-13 18:51:13 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:2] yii\base\ErrorException: htmlspecialchars() expects parameter 1 to be string, object given in C:\APP\GitHub\template\vendor\yiisoft\yii2\helpers\BaseHtml.php:111
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\PermissionController.php(56): yii\helpers\BaseHtml::encode()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdmin()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#8 {main}
+2019-08-13 18:51:12 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'page' => '1'
+    'limit' => '30'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2252'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin?page=1&limit=30'
+    'QUERY_STRING' => 'page=1&limit=30'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'page=1&limit=30'
+    'REDIRECT_URL' => '/permission/admin'
+    'REMOTE_PORT' => '51670'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/permission/admin'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565693472.5427
+    'REQUEST_TIME' => 1565693472
+]
+2019-08-13 18:53:45 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:2] yii\base\ErrorException: htmlspecialchars() expects parameter 1 to be string, object given in C:\APP\GitHub\template\vendor\yiisoft\yii2\helpers\BaseHtml.php:111
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\PermissionController.php(55): yii\helpers\BaseHtml::encode()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdmin()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#8 {main}
+2019-08-13 18:53:44 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'page' => '1'
+    'limit' => '30'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2260'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin?page=1&limit=30'
+    'QUERY_STRING' => 'page=1&limit=30'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'page=1&limit=30'
+    'REDIRECT_URL' => '/permission/admin'
+    'REMOTE_PORT' => '51908'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/permission/admin'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565693624.2326
+    'REQUEST_TIME' => 1565693624
+]
+2019-08-13 18:54:03 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][error][yii\base\ErrorException:2] yii\base\ErrorException: htmlspecialchars() expects parameter 1 to be string, object given in C:\APP\GitHub\template\vendor\yiisoft\yii2\helpers\BaseHtml.php:111
+Stack trace:
+#0 C:\APP\GitHub\template\backend\controllers\PermissionController.php(55): yii\helpers\BaseHtml::encode()
+#1 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\PermissionController->actionAdmin()
+#2 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\APP\GitHub\template\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Module.php(528): backend\controllers\PermissionController->runAction()
+#5 C:\APP\GitHub\template\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#6 C:\APP\GitHub\template\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\APP\GitHub\template\backend\web\index.php(17): yii\web\Application->run()
+#8 {main}
+2019-08-13 18:54:02 [127.0.0.1][1][50223naikrd7i76g43fr6550gc][info][application] $_GET = [
+    'page' => '1'
+    'limit' => '30'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '50223naikrd7i76g43fr6550gc'
+    '_csrf-backend' => 'a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://template/'
+    '__captcha/site/captcha' => 'tebaxu'
+    '__captcha/site/captchacount' => 1
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\应用\\学习\\TortoiseSVN\\bin;;C:;应用\\学习\\Git\\cmd;;;C:\\APP\\Git\\cmd;C:\\APP\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\应用\\学习\\Git LFS;C:\\Users\\Zhang Li\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Zhang Li\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Zhang Li\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/APP/phpStudy/PHPTutorial/php/php-7.1.13-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2260'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/permission/admin?page=1&limit=30'
+    'QUERY_STRING' => 'page=1&limit=30'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_QUERY_STRING' => 'page=1&limit=30'
+    'REDIRECT_URL' => '/permission/admin'
+    'REMOTE_PORT' => '51939'
+    'SCRIPT_FILENAME' => 'C:/APP/GitHub/template/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/APP/GitHub/template/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'template'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'advanced-backend=50223naikrd7i76g43fr6550gc; _csrf-backend=a73ca1622c5938d51dd45a9408b7c19c2013aaa863dc2a886b02f68bfff79495a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FeqmXBqvIrw20O7UvLmKTiZvLmL_78V6%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://template/permission/admin'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'template'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1565693642.0587
+    'REQUEST_TIME' => 1565693642
+]

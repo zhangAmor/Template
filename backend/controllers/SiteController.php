@@ -1,20 +1,20 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
 
-/**
- * Site controller
- */
-class SiteController extends Controller
+use common\helpers\Common;
+
+use backend\helpers\BackendHelpers;
+
+use backend\models\AdminLoginLogExtends;
+
+use backend\forms\Site\LoginForm;
+
+class SiteController extends MosController
 {
-    /**
-     * {@inheritdoc}
-     */
     public function behaviors()
     {
         return [
@@ -22,79 +22,112 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
+                    [
+                        'allow' => true,
+                        'actions' => ['login'],
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['error', 'captcha'],
+                    ],
                 ],
             ],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function actions()
     {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'backColor' => 0xFFFFFF,
+                'foreColor' => 0x009688,
+                'height' => 36,
+                'width' => 98,
+                'maxLength' => 6,
+                'minLength' => 6,
+                'offset' => 2,
+            ],
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
-
-    /**
-     * Login action.
-     *
-     * @return string
-     */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
+        if(!Yii::$app->user->isGuest)
+        {
             return $this->goHome();
         }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            $model->password = '';
-
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+        $LoginForm = new LoginForm();
+        if($LoginForm->load(Yii::$app->request->post()))
+        {
+            if($LoginForm->login())
+            {
+                return Common::echoJson(1000, '登录成功');
+            } else {
+                return Common::echoJson(1001, implode('<br>', $LoginForm->getFirstErrors()));
+            }
         }
+
+        $this->layout = false;
+        return $this->render('login', [
+            'title' => '登录',
+        ]);
     }
 
-    /**
-     * Logout action.
-     *
-     * @return string
-     */
     public function actionLogout()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionIndex()
+    {
+        $this->layout = false;
+
+        $admin_data = Yii::$app->mcache->getByKey('admin_datas', Yii::$app->user->id);
+        $admin_menu_datas = BackendHelpers::getAdminMenuDatas($admin_data['roleid']);
+
+        return $this->render('index', [
+            'title' => '首页',
+            'admin_data' => $admin_data,
+            'admin_menu_datas' => $admin_menu_datas,
+        ]);
+    }
+
+    public function actionHome()
+    {
+        $admin_data = Yii::$app->mcache->getByKey('admin_datas', Yii::$app->user->id);
+
+        $last_login_log_data = AdminLoginLogExtends::find()->where(['userid' => Yii::$app->user->id, 'succeed' => 1])->orderBy(['created_at' => SORT_DESC, 'logid' => SORT_DESC])->offset(1)->limit(1)->asArray()->one();
+        $last_login_log_data && $last_login_log_data['created_at_desc'] = Common::dateFormat($last_login_log_data['created_at']);
+
+        $admin_login_log_count = AdminLoginLogExtends::find()->where(['userid' => Yii::$app->user->id, 'succeed' => 1])->count();
+
+        $system_info =
+        [
+            'yii_version' => Yii::getVersion(),
+            'os' => PHP_OS,
+            'web_server' => strpos($_SERVER['SERVER_SOFTWARE'], 'PHP') === false ? $_SERVER['SERVER_SOFTWARE'] .' PHP/' . phpversion() : $_SERVER['SERVER_SOFTWARE'],
+            'mysql_version' => Yii::$app->db->pdo->getAttribute(\PDO::ATTR_SERVER_VERSION),
+            'file_upload_max_size' => @ini_get('file_uploads') ? ini_get('upload_max_filesize') : 'unknown',
+            'time' => Common::dateFormat(time()),
+        ];
+
+        return $this->render('home', [
+            'title' => '后台首页',
+            'admin_data' => $admin_data,
+            'last_login_log_data' => $last_login_log_data,
+            'admin_login_log_count' => $admin_login_log_count,
+            'system_info' => $system_info,
+        ]);
     }
 }
