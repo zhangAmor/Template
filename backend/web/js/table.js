@@ -19,8 +19,8 @@ layui.use(['table'], function (){
             dataName: 'data'
         },
         page: true,
-        limits: [30, 60, 90],
-        limit: 30,
+        limits: [20, 50, 100],
+        limit: 20,
         height: 'full-88'
     });
 
@@ -193,11 +193,27 @@ layui.use(['table'], function (){
         cols:[[
             {title:"角色 ID",width:110,fixed:"left",field:"roleid"},
             {title:"角色名",width:200,fixed:"left",field:"name"},
-            {title:"管理员数",width:110,field:"admin_nums",sort:!0},
+            // {title:"管理员数",width:110,field:"admin_nums",sort:!0},
             {title:"是否系统默认角色",width:150,templet:"#mos-table-role-col-is-system"},
             {title:"操作",width:200,fixed:"right",toolbar:"#mos-table-bar"}
         ]]
     });
 
+    // 充值记录
+    table.render({
+        elem: '#mos-table-recharge',
+        url: $('#mos-table-recharge').data('url'),
+        cols: [[
+            {title: 'ID', width: 110, fixed: 'left', field: 'id'},
+            {title: '手机号', width: 200, fixed: 'left', field: 'mobile'},
+            {title: '充值订单', width: 300, field: 'order_num'},
+            {title: '充值模式', width: 140, field: 'recharge_mode'},
+            {title: '订单创建时间', width: 170, field: 'create_time'},
+            {title: '充值时间', width: 170, field: 'recharge_time'},
+            {title: '充值金额', width: 170, field: 'recharge_price'},
+            {title: '支付状态', width: 170, field: 'recharge_status'}
+        ]],
+        height: 'full-184'
+    });
 
 });

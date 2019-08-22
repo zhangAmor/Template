@@ -66,7 +66,7 @@ use yii\helpers\Html;
             </div>
         </div>
     </div>
-    <div class="layui-footer">© <?php echo Html::encode(date('Y')); ?> <a href="<?php echo Html::encode(Yii::$app->params['system_url']); ?>" target="_blank"><?php echo Html::encode(Yii::$app->params['system_url']); ?></a></div>
+    <div class="layui-footer" style="color:#666;">后台管理系统</div>
     <a href="javascript:;" class="mos-index-fold-expand"><i class="layui-icon layui-icon-shrink-right"></i></a>
 </div>
 <ul class="layui-nav layui-nav-tree mos-index-tab-right-click" lay-filter="tab-right">

@@ -2,6 +2,7 @@
 
 namespace backend\forms\Permission;
 
+use backend\models\RoleExtends;
 use Yii;
 use yii\base\Model;
 
@@ -18,11 +19,12 @@ class AdminAddForm extends Model
     public $name;
     public $sex;
     public $disabled;
+    public $roleid;
 
     public function rules()
     {
         return [
-            [['username', 'password', 'name'], 'required'],
+            [['username', 'password', 'name', 'roleid'], 'required'],
             [['sex', 'disabled'], 'integer'],
             [['name'], 'string', 'max' => 20],
             ['username', 'validateUsername'],
@@ -38,6 +40,7 @@ class AdminAddForm extends Model
             'name' => '姓名',
             'sex' => '性别',
             'disabled' => '状态',
+            'roleid' => '角色',
         ];
     }
 
@@ -91,12 +94,18 @@ class AdminAddForm extends Model
                     $Admin = new AdminExtends();
                     $data['AdminExtends'] = [
                         'userid'   => $User->userid,
+                        'roleid'   => $this->roleid,
                         'name'     => $this->name,
                         'sex'      => $this->sex,
                         'disabled' => $this->disabled,
                     ];
-
                     $Admin->load($data) && $Admin->save();
+
+//                    $Role = new RoleExtends();
+//                    $role_info = $Role::find()->where(['=', 'roleid', $this->roleid])->one();
+//                    $role_info->admin_nums = $role_info->admin_nums + 1;
+//                    $role_info->save();
+
                 } else {
                     $this->addError('username', '保存失败');
                 }

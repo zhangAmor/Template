@@ -47,6 +47,8 @@ use yii\helpers\Html;
 <script type="text/javascript" src="/lib/layui/layui.js"></script>
 <script type="text/javascript" src="/lib/js/common.js"></script>
 <script type="text/javascript" src="/js/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<!--<script>$(function () {let i = 0;setInterval(function(){i = i + 1;let num = i%3;$('body').css({"background-image":"url('/img/login_bg"+num+".jpg')"});},'1000');})</script>-->
 <?php $this->endBody(); ?>
 </body>
 </html>

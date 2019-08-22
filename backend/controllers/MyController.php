@@ -10,7 +10,7 @@ use backend\models\AdminExtends;
 
 use backend\forms\My\InfoForm;
 use backend\forms\My\PwdForm;
-
+use common\models\Recharge;
 class MyController extends MosController
 {
     public function actionInfo()
@@ -50,6 +50,29 @@ class MyController extends MosController
 
         return $this->render('pwd', [
             'title' => '修改密码'
+        ]);
+    }
+
+    public function actionRecharge()
+    {
+        if(Yii::$app->request->isAjax)
+        {
+            $where = [];
+            $search = Yii::$app->request->get('search');
+            if($search)
+            {
+                var_dump($search);die;
+            }
+
+            $page = Yii::$app->request->get('page');
+            $limit = Yii::$app->request->get('limit');
+            $offset = ($page - 1) * $limit;
+            $count = Recharge::find()->where($where)->count();
+            $data =  Recharge::find()->where($where)->orderBy(['id' => SORT_DESC])->offset($offset)->limit($limit)->asArray()->all();
+            return Common::echoJson(1000, '', $data, $count);
+        }
+        return $this->render('recharge', [
+            'title' => '充值记录'
         ]);
     }
 }

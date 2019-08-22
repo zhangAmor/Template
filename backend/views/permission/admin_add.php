@@ -22,6 +22,17 @@ EOF;
         </div>
     </div>
     <div class="layui-form-item">
+        <label class="layui-form-label">角色</label>
+        <div class="layui-input-inline">
+            <select name="AdminAddForm[roleid]">
+                <option value="">请选择角色</option>
+                <?php foreach($role_list as $v): ?>
+                    <option value="<?php echo Html::encode($v['roleid']); ?>"><?php echo Html::encode($v['name']); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
         <label class="layui-form-label">姓名</label>
         <div class="layui-input-inline">
             <input type="text" name="AdminAddForm[name]" lay-verify="required" lay-verType="tips" placeholder="请输入姓名" class="layui-input">

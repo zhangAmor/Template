@@ -9,22 +9,17 @@ return [
 //    'user.passwordResetTokenExpire' => 3600,
 
     // 咨询邮箱
-    'admin_email' => '494686707@qq.com',
+    'admin_email' => '',
 
     // 咨询 QQ
-    'admin_qq' => '494686707',
+    'admin_qq' => '',
 
     // 系统名称
-    'system_name' => 'MOSTOP',
+    'system_name' => '',
 
     // 系统 URL
-    'system_url' => 'https://www.mostop.cn/',
+    'system_url' => '',
 
-    // 版权所有
-    'system_copyright_by' => '莫海耀',
-
-    // 团队成员
-    'system_development_team' => '莫海耀',
 
     // 站点配置
     'setting_datas' => [],

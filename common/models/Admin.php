@@ -39,7 +39,7 @@ class Admin extends \yii\db\ActiveRecord
     {
         return [
             [['userid'], 'required'],
-            [['userid', 'sex', 'disabled', 'created_at', 'created_by', 'updated_at', 'updated_by'], 'integer'],
+            [['userid', 'sex', 'disabled', 'created_at', 'created_by', 'updated_at', 'updated_by', 'roleid'], 'integer'],
             [['birthday'], 'safe'],
             [['name'], 'string', 'max' => 20],
             [['avatar', 'email'], 'string', 'max' => 100],

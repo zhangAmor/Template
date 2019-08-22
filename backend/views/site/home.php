@@ -48,35 +48,7 @@ EOF;
             </tbody>
         </table>
     </div>
-    <div class="layui-col-md6">
-        <table class="layui-table mos-common-margin-top0 mos-common-margin-bottom0">
-            <colgroup>
-                <col width="280">
-                <col>
-            </colgroup>
-            <thead>
-            <tr>
-                <th colspan="2"><?php echo Html::encode(Yii::$app->params['system_name']); ?> 系统开发团队</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td colspan="2">版权所有：<?php echo Html::encode(Yii::$app->params['system_copyright_by']); ?></td>
-            </tr>
-            <tr>
-                <td colspan="2">团队成员：<?php echo Html::encode(Yii::$app->params['system_development_team']); ?></td>
-            </tr>
-            <tr>
-                <td>官网网站：<a href="<?php echo Html::encode(Yii::$app->params['system_url']); ?>" target="_blank"><?php echo Html::encode(Yii::$app->params['system_url']); ?></a></td>
-                <td>咨询微信：<a href="javascript:;" id="mos-site-home-wechat"><i class="layui-icon layui-icon-login-wechat"></i> lensic_mo</a><div id="mos-site-home-wechat-img" class="layui-hide"></div></td>
-            </tr>
-            <tr>
-                <td>咨询 QQ：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo Html::encode(Yii::$app->params['admin_qq']); ?>&site=qq&menu=yes"><i class="layui-icon layui-icon-login-qq"></i> <?php echo Html::encode(Yii::$app->params['admin_qq']); ?></a></td>
-                <td>咨询邮箱：<a href="mailto:<?php echo Html::encode(Yii::$app->params['admin_email']); ?>"><?php echo Html::encode(Yii::$app->params['admin_email']); ?></a></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+
     <?php if($admin_data['userid'] == 1): ?>
         <div class="layui-col-md12">
             <table class="layui-table mos-common-margin-top0 mos-common-margin-bottom0">

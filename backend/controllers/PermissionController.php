@@ -16,6 +16,7 @@ use backend\forms\Permission\AdminAddForm;
 use backend\forms\Permission\AdminEditForm;
 use backend\forms\Permission\RoleAddForm;
 use backend\forms\Permission\RoleEditForm;
+use backend\forms\Permission\RoleMoveForm;
 
 class PermissionController extends MosController
 {
@@ -72,6 +73,7 @@ class PermissionController extends MosController
     public function actionAdminAdd()
     {
         $AdminAddForm = new AdminAddForm();
+        $role_list = RoleExtends::roleList('1');
         if($AdminAddForm->load(Yii::$app->request->post()))
         {
             if($AdminAddForm->save())
@@ -86,6 +88,7 @@ class PermissionController extends MosController
             'title' => '添加管理员',
             'disabled_k_v' => AdminExtends::$disabled,
             'sex_k_v' => AdminExtends::$sex,
+            'role_list' => $role_list,
         ]);
     }
 
@@ -94,7 +97,7 @@ class PermissionController extends MosController
         $userid = Yii::$app->request->get('userid');
 
         $admin_cache_data = Yii::$app->mcache->getByKey('admin_datas', $userid);
-        $role_list = RoleExtends::roleList();
+        $role_list = RoleExtends::roleList('1');
         if(!$admin_cache_data)
         {
             return Common::echoJson(1001, '请选择操作用户');
@@ -122,6 +125,10 @@ class PermissionController extends MosController
         ]);
     }
 
+    /**
+     * 删除管理员
+     * @return string
+     */
     public function actionAdminDel()
     {
         $userid = Yii::$app->request->get('userid');
@@ -245,12 +252,58 @@ class PermissionController extends MosController
 
     /**
      * 删除角色
+     * @return string
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
     public function actionRoleDel()
     {
         $roleid = Yii::$app->request->get('roleid');
 
-        var_dump($roleid);die;
-//        return Common::echoJson(1003, '该角色下存在管理员，删除前请将管理员转移到其它角色');
+        $num = AdminExtends::find()->where(['=','roleid',$roleid])->count();
+        if($num > 0)
+        {
+            return Common::echoJson(1003, '该角色下存在管理员，删除前请将管理员转移到其它角色');
+        }
+
+        $customer = RoleExtends::findOne($roleid);
+        $res = $customer->delete();
+
+        if($res)
+        {
+            return Common::echoJson(1, '删除角色成功');
+        }
+        else
+        {
+            return Common::echoJson(0, '删除角色失败');
+        }
+    }
+
+    /**
+     * 转移角色管理员
+     */
+    public function actionRoleMove()
+    {
+        $roleid = Yii::$app->request->get('roleid');
+        $role_info = RoleExtends::find()->where(['=','roleid',$roleid])->one();
+        $role_list = RoleExtends::roleList('1');
+
+        //修改
+        $RoleMoveForm = new RoleMoveForm();
+        if($RoleMoveForm->load(Yii::$app->request->post()))
+        {
+            if($RoleMoveForm->save())
+            {
+                return Common::echoJson(1000, '保存成功');
+            } else {
+                return Common::echoJson(1003, implode('<br>', $RoleMoveForm->getFirstErrors()));
+            }
+        }
+
+        return $this->render('role_move', [
+            'title' => '转移角色管理员',
+            'role_info' => $role_info,
+            'role_list' => $role_list,
+        ]);
     }
 }
